@@ -1,24 +1,7 @@
-# README
+# Brasil Sincero - API
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+[ ![Codeship Status for brasilsincero/brasilsincero-api](https://codeship.com/projects/0c579630-4257-0134-daa8-1ed03da5965c/status?branch=master)](https://codeship.com/projects/168152)
 
-Things you may want to cover:
+## Getting Start
 
-* Ruby version
-
-* System dependencies
-
-* Configuration
-
-* Database creation
-
-* Database initialization
-
-* How to run the test suite
-
-* Services (job queues, cache servers, search engines, etc.)
-
-* Deployment instructions
-
-* ...
+## Routes
