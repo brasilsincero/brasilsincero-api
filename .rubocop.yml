@@ -1,2 +1,6 @@
+AllCops:
+  Exclude:
+    - 'db/schema.rb'
+
 Rails:
   Enabled: true
