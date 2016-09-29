@@ -1,0 +1,2 @@
+class BolsaFamiliaPayment < ApplicationRecord
+end

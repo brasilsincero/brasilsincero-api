@@ -10,9 +10,26 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 0) do
+ActiveRecord::Schema.define(version: 20160824000928) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
+
+  create_table "bolsa_familia_payments", force: :cascade do |t|
+    t.string   "uf"
+    t.string   "codigo_siafi_municipio"
+    t.string   "nome_municipio"
+    t.string   "codigo_funcao"
+    t.string   "codigo_subfuncao"
+    t.string   "codigo_programa"
+    t.string   "codigo_acao"
+    t.string   "nis_favorecido"
+    t.string   "nome_favorecido"
+    t.string   "fonte_finalidade"
+    t.decimal  "valor_parcela"
+    t.date     "data_competencia"
+    t.datetime "created_at",             null: false
+    t.datetime "updated_at",             null: false
+  end
 
 end
