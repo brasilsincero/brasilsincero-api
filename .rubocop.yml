@@ -4,3 +4,10 @@ AllCops:
 
 Rails:
   Enabled: true
+
+Style/Documentation:
+  Enabled: false
+
+Metrics/MethodLength:
+  Exclude:
+    - 'db/migrate/*'
