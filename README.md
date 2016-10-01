@@ -24,6 +24,6 @@
 
 ## Importing 'Bolsa Família' records
 
-      $ embulk run lib/embulk/bolsa_familia.yml
+      $ path_prefix='tmp/FILENAME.csv' embulk run lib/embulk/bolsa_familia.yml.liquid
 
 ## Routes
