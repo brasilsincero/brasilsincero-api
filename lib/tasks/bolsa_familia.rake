@@ -9,6 +9,15 @@ namespace :bolsa_familia do
     BolsaFamilia::Download.perform(args.month, args.year)
   end
 
+  desc 'Downloads all the payments file'
+  task download_all: :environment do
+    (2011..Time.current.year).each do |year|
+      (1..12).each do |month|
+        BolsaFamilia::Download.perform(month, year)
+      end
+    end
+  end
+
   desc 'Imports the payments (`rails bolsa_familia:import[2, 2015]`)'
   task :import, [:month, :year] => :environment do |_task, args|
     BolsaFamilia::Import.perform(args.month, args.year)
