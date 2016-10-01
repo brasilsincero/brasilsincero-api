@@ -11,10 +11,8 @@ class CreateBolsaFamiliaPayments < ActiveRecord::Migration[5.0]
       t.string :nis_favorecido
       t.string :nome_favorecido
       t.string :fonte_finalidade
-      t.decimal :valor_parcela
+      t.decimal :valor_parcela, precision: 15, scale: 2
       t.date :data_competencia
-
-      t.timestamps
     end
   end
 
