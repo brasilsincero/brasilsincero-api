@@ -28,6 +28,8 @@
 
 ## Importing 'Bolsa Família' records
 
-      $ path_prefix='tmp/FILENAME.csv' embulk run lib/embulk/bolsa_familia.yml.liquid
+      $ bin/rails "bolsa_familia:import[month, year]"
 
-## Routes
+## Downloading and Importing payments files
+
+      $ bin/rails "bolsa_familia:download_and_import[month, year]"
