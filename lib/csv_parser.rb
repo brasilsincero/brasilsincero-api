@@ -33,9 +33,7 @@ class CsvParser
 
   def record_for(row)
     data = @converter.convert(row.to_h)
-    @model.new(data).tap do |record|
-      record.create_partition_from_record if record.respond_to?(:create_partition_from_record)
-    end
+    @model.new(data)
   end
 
   def puts_green(text)
