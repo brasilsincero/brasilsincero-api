@@ -5,4 +5,9 @@ namespace :bolsa_familia do
     parser = CsvParser.new(filename, BolsaFamiliaPayment, BolsaFamiliaPaymentConverter)
     parser.all
   end
+
+  desc 'Creates infrastructure for partition tables'
+  task infrastructure: :environment do
+    BolsaFamilia::Infrastructure.create
+  end
 end

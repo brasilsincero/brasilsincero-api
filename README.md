@@ -18,10 +18,11 @@
 
       $ embulk gem install embulk-filter-ruby_proc
 
-## Importing 'Bolsa Família' records
+## Creating the infrastructure
 
-- Change the filename in lib/embulk/bolsa_familia.yml
-- Import from csv to database
+      $ bin/rails bolsa_familia:infrastructure
+
+## Importing 'Bolsa Família' records
 
       $ embulk run lib/embulk/bolsa_familia.yml
 
