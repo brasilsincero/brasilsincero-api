@@ -137,6 +137,7 @@ GEM
       ruby-progressbar (~> 1.7)
       unicode-display_width (~> 1.0, >= 1.0.1)
     ruby-progressbar (1.8.1)
+    rubyzip (0.9.9)
     spring (1.7.2)
     spring-watcher-listen (2.0.0)
       listen (>= 2.7, < 4.0)
@@ -171,6 +172,7 @@ DEPENDENCIES
   rails (~> 5.0.0, >= 5.0.0.1)
   rspec-rails (~> 3.5)
   rubocop
+  rubyzip
   spring
   spring-watcher-listen (~> 2.0.0)
   tzinfo-data
