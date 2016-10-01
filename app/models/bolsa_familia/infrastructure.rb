@@ -3,6 +3,8 @@ module BolsaFamilia
     FIRST_YEAR = 2011
 
     def self.create
+      Rails.logger = Logger.new(STDOUT)
+      Rails.logger.info 'Creating infrastructure'
       (FIRST_YEAR..Time.current.year).each do |year|
         (1..12).each do |month|
           partition_date = Date.new(year, month, 1)
