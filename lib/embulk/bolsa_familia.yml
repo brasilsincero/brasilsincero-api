@@ -1,0 +1,39 @@
+in:
+  type: file
+  path_prefix: {{ env.path_prefix }}
+  parser:
+    charset: ISO8859-1
+    newline: CRLF
+    type: csv
+    delimiter: "\t"
+    quote: '"'
+    escape: '"'
+    skip_header_lines: 1
+    columns:
+    - { name: uf, type: string }
+    - { name: codigo_siafi_municipio, type: string }
+    - { name: nome_municipio, type: string }
+    - { name: codigo_funcao, type: string }
+    - { name: codigo_subfuncao, type: string }
+    - { name: codigo_programa, type: string }
+    - { name: codigo_acao, type: string }
+    - { name: nis_favorecido, type: string }
+    - { name: nome_favorecido, type: string }
+    - { name: fonte_finalidade, type: string }
+    - { name: valor_parcela, type: string }
+    - { name: data_competencia, type: timestamp, format: '%m/%Y' }
+filters:
+  - type: ruby_proc
+    columns:
+      - name: valor_parcela
+        proc: |
+          ->(valor_parcela) do
+            valor_parcela.gsub(/\,/, '')
+          end
+out:
+  type: postgresql
+  host: 192.168.25.191
+  user: postgres
+  database: brasilsincero-api_development
+  table: bolsa_familia_payments
+  mode: insert
