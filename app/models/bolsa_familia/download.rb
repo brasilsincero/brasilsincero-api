@@ -5,12 +5,12 @@ module BolsaFamilia
   class Download
     def self.perform(month, year)
       Rails.logger = Logger.new(STDOUT)
-      compressed_file = download(filename, month, year)
+      compressed_file = download(month, year)
       decompressed_file = decompress(compressed_file)
       save_head(decompressed_file)
     end
 
-    def self.download(filename, month, year)
+    def self.download(month, year)
       formatted_month = format('%02d', month.to_i)
       filename = "tmp/#{year}#{formatted_month}_BolsaFamiliaFolhaPagamento.zip"
       Rails.logger.info "Downloading to #{filename}"
