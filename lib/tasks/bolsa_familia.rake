@@ -13,7 +13,8 @@ namespace :bolsa_familia do
   task download_all: :environment do
     (2011..Time.current.year).each do |year|
       (1..12).each do |month|
-        BolsaFamilia::Download.perform(month, year)
+        break if year == Time.current.year && month == Time.current.month
+        Rake::Task['bolsa_familia:download'].invoke(month, year)
       end
     end
   end
