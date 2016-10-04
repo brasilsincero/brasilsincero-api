@@ -10,13 +10,9 @@
       $ bin/rails db:setup
 
 - Install Embulk - instructions [here](https://github.com/embulk/embulk#quick-start)
-- Install Embulk Postgresql Output plugin
+- Install Embulk dependencies
 
-      $ embulk gem install embulk-output-postgresql
-
-- Install Embulk RubyProc Filter plugin
-
-      $ embulk gem install embulk-filter-ruby_proc
+      $ cd lib/embulk/embulk_bundle && embulk bundle install
 
 ## Creating the infrastructure
 

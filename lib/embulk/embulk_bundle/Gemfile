@@ -1,0 +1,5 @@
+source 'https://rubygems.org/'
+
+gem 'embulk', '~> 0.8.0'
+gem 'embulk-output-postgresql'
+gem 'embulk-filter-ruby_proc'
