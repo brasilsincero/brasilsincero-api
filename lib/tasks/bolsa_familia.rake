@@ -1,11 +1,13 @@
 namespace :bolsa_familia do
   desc 'Creates infrastructure for partition tables'
   task infrastructure: :environment do
+    Rails.logger = Logger.new(STDOUT)
     BolsaFamilia::Infrastructure.create
   end
 
   desc 'Downloads the payments file (`rails bolsa_familia:download[2, 2015]`)'
   task :download, [:month, :year] => :environment do |_task, args|
+    Rails.logger = Logger.new(STDOUT)
     BolsaFamilia::Download.perform(args.month, args.year)
   end
 
@@ -21,6 +23,7 @@ namespace :bolsa_familia do
 
   desc 'Imports the payments (`rails bolsa_familia:import[2, 2015]`)'
   task :import, [:month, :year] => :environment do |_task, args|
+    Rails.logger = Logger.new(STDOUT)
     BolsaFamilia::Import.perform(args.month, args.year)
   end
 

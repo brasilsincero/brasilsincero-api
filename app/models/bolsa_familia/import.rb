@@ -1,7 +1,6 @@
 module BolsaFamilia
   class Import
     def self.perform(month, year)
-      Rails.logger = Logger.new(STDOUT)
       filename = BolsaFamilia.generate_filename(month, year)
       embulk_file = 'lib/embulk/bolsa_familia.yml.liquid'
       Rails.logger.info "Importing #{filename} with #{embulk_file}"

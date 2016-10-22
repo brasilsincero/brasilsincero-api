@@ -4,7 +4,6 @@ require 'zip/zip'
 module BolsaFamilia
   class Download
     def self.perform(month, year)
-      Rails.logger = Logger.new(STDOUT)
       filename = BolsaFamilia.generate_filename(month, year)
       compressed_file = download(month, year)
       decompressed_file = decompress(compressed_file)
