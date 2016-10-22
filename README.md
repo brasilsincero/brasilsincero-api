@@ -33,3 +33,13 @@
 ## Downloading and Importing payments files
 
       $ bin/rails "bolsa_familia:download_and_import[month, year]"
+
+## Routes
+
+Top 50 "bolsa familia" payments in the current year
+
+      /v1/bolsa_familia/payments_ranking
+
+Top 50 "bolsa familia" payments in the informed year
+
+      /v1/bolsa_familia/payments_ranking?year=YYYY
