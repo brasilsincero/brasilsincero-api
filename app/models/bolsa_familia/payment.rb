@@ -27,5 +27,8 @@ module BolsaFamilia
       where('DATE(data_competencia) = ?', Date.new(year, month, 1))
     }
     scope :by_state, ->(state) { where(uf: state) }
+
+    # Order data
+    scope :ordered_by_value, -> { order(valor_parcela: :desc) }
   end
 end
