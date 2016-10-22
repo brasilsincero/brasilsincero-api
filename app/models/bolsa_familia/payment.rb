@@ -16,10 +16,12 @@ module BolsaFamilia
       super(options.merge(except: :id))
     end
 
-    # Filter columns
-    scope :ranking_columns, lambda {
+    # Ranking
+    scope :people_ranking, lambda {
       select('nome_municipio, uf, nome_favorecido, MAX(valor_parcela)')
+        .group(:nis_favorecido, :nome_municipio, :uf, :nome_favorecido)
     }
+    scope :state_ranking, -> { select('uf, MAX(valor_parcela)').group(:uf) }
 
     # Filter data
     scope :by_year, ->(year) { where('EXTRACT(year from data_competencia) = ?', year) }
@@ -30,16 +32,5 @@ module BolsaFamilia
 
     # Order data
     scope :ranking_order, -> { order('MAX(valor_parcela) DESC') }
-
-    # Group data
-    scope :ranking_unique_people, lambda {
-      group(:nis_favorecido, :nome_municipio, :uf, :nome_favorecido)
-    }
-    scope :state_ranking_in_year, lambda { |year|
-      select('uf, MAX(valor_parcela) AS valor')
-        .by_year(year)
-        .group(:uf)
-        .order('valor DESC')
-    }
   end
 end

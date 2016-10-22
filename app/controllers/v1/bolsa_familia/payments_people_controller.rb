@@ -1,13 +1,13 @@
 module V1
   module BolsaFamilia
-    class PaymentsRankingController < ApplicationController
+    class PaymentsPeopleController < ApplicationController
       def index
-        ranking = Rails.cache.fetch("bolsa_familia/payments_ranking/#{year}") do
-          ::BolsaFamilia::Payment.ranking_columns
+        ranking = Rails.cache.fetch("bolsa_familia/payments_people/#{year}") do
+          ::BolsaFamilia::Payment.people_ranking
                                  .by_year(year)
-                                 .ranking_unique_people
                                  .ranking_order
                                  .limit(50)
+                                 .map(&:as_json)
         end
         render json: ranking, status: :ok
       end
@@ -16,10 +16,6 @@ module V1
 
       def year
         params[:year] || Time.current.year
-      end
-
-      def state
-        params[:state]
       end
     end
   end
