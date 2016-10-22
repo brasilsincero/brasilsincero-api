@@ -5,6 +5,7 @@ gem 'pg', '~> 0.18'
 gem 'puma', '~> 3.0'
 gem 'partitionable'
 gem 'rubyzip'
+gem 'redis-rails'
 
 group :development, :test do
   gem 'byebug', platform: :mri

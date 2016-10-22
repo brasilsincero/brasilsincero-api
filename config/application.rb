@@ -28,5 +28,9 @@ module BrasilsinceroApi
     config.api_only = true
 
     config.eager_load_paths << "#{Rails.root}/lib"
+
+    config.cache_store = :redis_store,
+                         ENV.fetch('REDIS_URL', 'redis://localhost:6379/0/cache'),
+                         { expires_in: 1.year }
   end
 end
