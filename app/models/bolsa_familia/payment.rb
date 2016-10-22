@@ -17,8 +17,8 @@ module BolsaFamilia
     end
 
     # Filter columns
-    scope :main_columns, lambda {
-      select('nome_municipio, uf, nome_favorecido, valor_parcela, data_competencia')
+    scope :ranking_columns, lambda {
+      select('nome_municipio, uf, nome_favorecido, MAX(valor_parcela)')
     }
 
     # Filter data
