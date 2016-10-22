@@ -11,7 +11,7 @@ namespace :bolsa_familia do
 
   desc 'Downloads all the payments file'
   task download_all: :environment do
-    (2011..Time.current.year).each do |year|
+    (BolsaFamilia::Infrastructure::FIRST_YEAR..Time.current.year).each do |year|
       (1..12).each do |month|
         break if year == Time.current.year && month == Time.current.month
         Rake::Task['bolsa_familia:download'].invoke(month, year)
