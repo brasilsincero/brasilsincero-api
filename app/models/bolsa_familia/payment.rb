@@ -30,5 +30,10 @@ module BolsaFamilia
 
     # Order data
     scope :ranking_order, -> { order('MAX(valor_parcela) DESC') }
+
+    # Group data
+    scope :ranking_unique_people, lambda {
+      group(:nis_favorecido, :nome_municipio, :uf, :nome_favorecido)
+    }
   end
 end
