@@ -15,3 +15,7 @@
 
 # Ignore Byebug command history file.
 .byebug_history
+
+# Ignore embulk paths
+/lib/embulk/embulk_bundle/embulk
+/lib/embulk/embulk_bundle/jruby
