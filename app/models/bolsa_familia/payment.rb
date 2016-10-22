@@ -35,5 +35,11 @@ module BolsaFamilia
     scope :ranking_unique_people, lambda {
       group(:nis_favorecido, :nome_municipio, :uf, :nome_favorecido)
     }
+    scope :state_ranking_in_year, lambda { |state, year|
+      select('uf, MAX(valor_parcela) AS valor')
+        .by_year(year)
+        .group(:uf)
+        .order('valor DESC')
+    }
   end
 end
