@@ -15,5 +15,10 @@ module BolsaFamilia
     def as_json(options = {})
       super(options.merge(except: :id))
     end
+
+    # Filter columns
+    scope :main_columns, lambda {
+      select('nome_municipio, uf, nome_favorecido, valor_parcela, data_competencia')
+    }
   end
 end
