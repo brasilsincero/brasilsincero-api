@@ -22,6 +22,10 @@
 
       $ bin/rails "bolsa_familia:download[month, year]"
 
+## Downloading all payments files
+
+      $ bin/rails "bolsa_familia:download_all"
+
 ## Importing 'Bolsa Família' records
 
       $ bin/rails "bolsa_familia:import[month, year]"
