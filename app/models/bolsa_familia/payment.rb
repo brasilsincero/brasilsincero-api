@@ -29,6 +29,6 @@ module BolsaFamilia
     scope :by_state, ->(state) { where(uf: state) }
 
     # Order data
-    scope :ordered_by_value, -> { order(valor_parcela: :desc) }
+    scope :ranking_order, -> { order('MAX(valor_parcela) DESC') }
   end
 end
