@@ -20,5 +20,12 @@ module BolsaFamilia
     scope :main_columns, lambda {
       select('nome_municipio, uf, nome_favorecido, valor_parcela, data_competencia')
     }
+
+    # Filter data
+    scope :by_year, ->(year) { where('EXTRACT(year from data_competencia) = ?', year) }
+    scope :by_year_and_month, lambda { |year, month|
+      where('DATE(data_competencia) = ?', Date.new(year, month, 1))
+    }
+    scope :by_state, ->(state) { where(uf: state) }
   end
 end
