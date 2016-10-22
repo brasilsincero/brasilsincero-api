@@ -18,10 +18,10 @@ module BolsaFamilia
 
     # Ranking
     scope :people_ranking, lambda {
-      select('nome_municipio, uf, nome_favorecido, MAX(valor_parcela)')
+      select('nome_municipio, uf, nome_favorecido, SUM(valor_parcela)')
         .group(:nis_favorecido, :nome_municipio, :uf, :nome_favorecido)
     }
-    scope :state_ranking, -> { select('uf, MAX(valor_parcela)').group(:uf) }
+    scope :state_ranking, -> { select('uf, SUM(valor_parcela)').group(:uf) }
 
     # Filter data
     scope :by_year, ->(year) { where('EXTRACT(year from data_competencia) = ?', year) }
@@ -31,6 +31,6 @@ module BolsaFamilia
     scope :by_state, ->(state) { where(uf: state) }
 
     # Order data
-    scope :ranking_order, -> { order('MAX(valor_parcela) DESC') }
+    scope :ranking_order, -> { order('SUM(valor_parcela) DESC') }
   end
 end
