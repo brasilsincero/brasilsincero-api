@@ -11,5 +11,9 @@ module BolsaFamilia
         nis_favorecido
         data_competencia
       ), logdate_attr: 'data_competencia'
+
+    def as_json(options = {})
+      super(options.merge(except: :id))
+    end
   end
 end
