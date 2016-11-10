@@ -40,9 +40,17 @@ Top 50 "bolsa familia" payments in the current year
 
       /v1/bolsa_familia/payments_people
 
+Top 50 "bolsa familia" payments in the current year and state
+
+      /v1/bolsa_familia/payments_people?state=sp
+
 Top 50 "bolsa familia" payments in the informed year
 
       /v1/bolsa_familia/payments_people?year=YYYY
+
+Top 50 "bolsa familia" payments in the informed year and state
+
+      /v1/bolsa_familia/payments_people?year=YYYY&state=sp
 
 Top "bolsa familia" payments grouped by state in the current year
 
