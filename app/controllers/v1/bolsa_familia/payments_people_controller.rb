@@ -42,7 +42,7 @@ module V1
       end
 
       def year
-        params[:year] || Time.current.year
+        @year ||= Year.find(params[:year])
       end
     end
   end
