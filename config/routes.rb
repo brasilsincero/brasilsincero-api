@@ -1,8 +1,13 @@
 Rails.application.routes.draw do
   namespace :v1 do
     namespace :bolsa_familia do
-      resources :payments_people, only: [:index]
-      resources :payments_states, only: [:index]
+      resources :people, only: [] do
+        get :ranking, action: :index, on: :collection
+      end
+
+      resources :states, only: [] do
+        get :ranking, action: :index, on: :collection
+      end
     end
   end
 end
