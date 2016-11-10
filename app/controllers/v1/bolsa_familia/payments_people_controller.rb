@@ -1,6 +1,8 @@
 module V1
   module BolsaFamilia
     class PaymentsPeopleController < ApplicationController
+      include RecordNotFoundHandler
+
       def index
         render json: {
           year: year,
@@ -36,7 +38,7 @@ module V1
       end
 
       def state
-        params[:state]&.upcase
+        @state ||= State.find(params[:state])
       end
 
       def year
