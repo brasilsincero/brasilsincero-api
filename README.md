@@ -34,6 +34,13 @@
 
       $ bin/rails "bolsa_familia:download_and_import[month, year]"
 
+## Crawler
+
+- Install the [httrack](http://www.httrack.com/)
+- Run the command
+
+      $ httrack --list public/crawler_urls.txt --depth=0 --max-time=300 --sockets=1 --timeout=300 --retries=1
+
 ## Routes
 
 Top 50 "bolsa familia" payments in the current year
