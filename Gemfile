@@ -9,6 +9,7 @@ gem 'partitionable'
 gem 'rubyzip'
 gem 'redis-rails'
 gem 'rack-cors'
+gem 'rack-attack'
 
 group :development, :test do
   gem 'byebug', platform: :mri
