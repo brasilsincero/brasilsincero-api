@@ -8,6 +8,7 @@ gem 'puma', '~> 3.0'
 gem 'partitionable'
 gem 'rubyzip'
 gem 'redis-rails'
+gem 'rack-cors'
 
 group :development, :test do
   gem 'byebug', platform: :mri
