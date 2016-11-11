@@ -39,7 +39,7 @@
 - Install the [httrack](http://www.httrack.com/)
 - Run the command
 
-      $ httrack --list public/crawler_urls.txt --depth=0 --max-time=300 --sockets=1 --timeout=300 --retries=1
+      $ httrack --list public/crawler_urls.txt --depth=0 --max-time=600000000 --sockets=1 --timeout=600000000 --retries=1
 
 ## Routes
 
