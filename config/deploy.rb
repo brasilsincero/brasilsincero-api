@@ -42,7 +42,7 @@ task :setup do
 end
 
 desc "Deploys the current version to the server."
-task :deploy do
+task deploy: :environment do
   # uncomment this line to make sure you pushed your local branch to the remote origin
   # invoke :'git:ensure_pushed'
   deploy do
