@@ -26,4 +26,8 @@ group :development do
   gem 'mina-puma', require: false
 end
 
+group :production do
+  gem 'newrelic_rpm'
+end
+
 gem 'tzinfo-data', platforms: [:mingw, :mswin, :x64_mingw, :jruby]
