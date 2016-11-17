@@ -1,6 +1,7 @@
 AllCops:
   Exclude:
     - 'db/schema.rb'
+    - 'config/deploy.rb'
 
 Rails:
   Enabled: true
