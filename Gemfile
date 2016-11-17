@@ -22,7 +22,7 @@ group :development do
   gem 'spring-watcher-listen', '~> 2.0.0'
   gem 'overcommit'
   gem 'rubocop', require: false
-  gem 'mina', require: false
+  gem 'mina', '< 1.0.0', require: false
   gem 'mina-puma', require: false
 end
 
