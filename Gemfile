@@ -10,6 +10,7 @@ gem 'rubyzip'
 gem 'redis-rails'
 gem 'rack-cors'
 gem 'rack-attack'
+gem 'newrelic_rpm'
 
 group :development, :test do
   gem 'byebug', platform: :mri
@@ -24,10 +25,6 @@ group :development do
   gem 'rubocop', require: false
   gem 'mina', '< 1.0.0', require: false
   gem 'mina-puma', require: false
-end
-
-group :production do
-  gem 'newrelic_rpm'
 end
 
 gem 'tzinfo-data', platforms: [:mingw, :mswin, :x64_mingw, :jruby]
