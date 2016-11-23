@@ -53,8 +53,8 @@ task deploy: :environment do
     invoke :'rails:db_migrate'
     invoke :'deploy:cleanup'
 
-    on :launch do
-      invoke :'puma:restart'
+    to :launch do
+      invoke :'puma:phased_restart'
     end
   end
 
