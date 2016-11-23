@@ -85,7 +85,7 @@ GEM
       rails (~> 5.0.0, >= 5.0.0.1)
     pg (0.18.4)
     powerpack (0.1.1)
-    puma (3.6.0)
+    puma (3.6.2)
     rack (2.0.1)
     rack-attack (5.0.1)
       rack
