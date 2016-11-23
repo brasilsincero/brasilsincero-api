@@ -3,7 +3,7 @@ module V1
     class YearlyCostsController < ApplicationController
       def index
         money_spent = Rails.cache.fetch('bolsa_familia/yearly_costs/money_spent') do
-          (FIRST_YEAR..Time.current.year).map do |year|
+          (BolsaFamilia::Infrastructure::FIRST_YEAR..Time.current.year).map do |year|
             {
               year: year,
               money_spent: money_spent(year)
