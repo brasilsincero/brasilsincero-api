@@ -11,6 +11,7 @@ gem 'redis-rails'
 gem 'rack-cors'
 gem 'rack-attack'
 gem 'newrelic_rpm'
+gem 'jekyll'
 
 group :development, :test do
   gem 'byebug', platform: :mri
