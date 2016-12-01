@@ -1,0 +1,13 @@
+title: Brasil Sincero
+email: thiagogsr@gmail.com
+description: > # this means to ignore newlines until "baseurl:"
+  Brasil Sincero é um projeto com a proposta de detalhar os gastos do
+  Governo Federal, disponíveis no Portal da Transparência. O objetivo é que a
+  população use dessas informações para encontrar possíveis fraudes e denunciar
+  para o orgão competente. Além disso serve como estatística dos gastos públicos
+  ao longo do anos.
+baseurl: "/app"
+url: "http://brasilsincero.thiagoguimaraes.com.br"
+
+# Build settings
+markdown: kramdown
