@@ -1,0 +1,76 @@
+---
+layout: default
+title: Bolsa Família - Favorecidos
+---
+<form id="people-form">
+  <div class="row">
+    <div class="col-md-6">
+      <div class="form-group">
+        <label for="people-year" class="label-control">Exercício</label>
+        <select id="people-year" class="form-control">
+          <option>2016</option>
+          <option>2015</option>
+          <option>2014</option>
+          <option>2013</option>
+          <option>2012</option>
+        </select>
+      </div>
+    </div>
+
+    <div class="col-md-6">
+      <div class="form-group">
+        <label for="people-state" class="label-control">Estado</label>
+        <select id="people-state" class="form-control">
+          <option value="">Todos</option>
+          <option>AC</option>
+          <option>AL</option>
+          <option>AM</option>
+          <option>AP</option>
+          <option>BA</option>
+          <option>CE</option>
+          <option>DF</option>
+          <option>ES</option>
+          <option>GO</option>
+          <option>MA</option>
+          <option>MG</option>
+          <option>MS</option>
+          <option>MT</option>
+          <option>PA</option>
+          <option>PB</option>
+          <option>PE</option>
+          <option>PI</option>
+          <option>PR</option>
+          <option>RJ</option>
+          <option>RN</option>
+          <option>RO</option>
+          <option>RR</option>
+          <option>RS</option>
+          <option>SC</option>
+          <option>SE</option>
+          <option>SP</option>
+          <option>TO</option>
+        </select>
+      </div>
+    </div>
+  </div>
+</form>
+
+<p><strong data-people-count></strong> pessoas receberam auxílio do Bolsa Família no exercício <span data-people-active-year></span>.</p>
+<p><strong data-people-money></strong> foram investidos no exercício <span data-people-active-year></span>.</p>
+<p><strong data-people-ranking-count></strong> favorecidos que mais receberam Bolsa Família no exercício <span data-people-active-year></span>.</p>
+
+<table class="table" id="people-table-data">
+  <thead>
+    <tr>
+      <th>Nome Completo</th>
+      <th>Cidade</th>
+      <th>Estado</th>
+      <th>Valor Recebido</th>
+    </tr>
+  </thead>
+  <tbody>
+  </tbody>
+</table>
+
+<script type="text/javascript" src="{{ "/assets/javascript/common.js" | prepend: site.baseurl }}"></script>
+<script type="text/javascript" src="{{ "/assets/javascript/bolsa_familia_favorecidos.js" | prepend: site.baseurl }}"></script>

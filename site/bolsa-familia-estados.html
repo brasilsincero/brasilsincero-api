@@ -1,0 +1,38 @@
+---
+layout: default
+title: Bolsa Família - Estados
+---
+<div class="row">
+  <div class="col-md-6">
+    <form id="states-form">
+      <div class="form-group">
+        <label for="states-year" class="label-control">Exercício</label>
+        <select id="states-year" class="form-control">
+          <option>2016</option>
+          <option>2015</option>
+          <option>2014</option>
+          <option>2013</option>
+          <option>2012</option>
+        </select>
+      </div>
+    </form>
+    <table class="table" id="states-table-data">
+      <thead>
+        <tr>
+          <th>Estado</th>
+          <th>Valor Investido</th>
+        </tr>
+      </thead>
+      <tbody>
+      </tbody>
+    </table>
+  </div>
+
+  <div class="col-md-6">
+    <div id="map_div" style="width: 100%; height: 340px;"></div>
+    <div id="years_div" style="width: 100%; height: 340px;"></div>
+  </div>
+</div>
+
+<script type="text/javascript" src="{{ "/assets/javascript/common.js" | prepend: site.baseurl }}"></script>
+<script type="text/javascript" src="{{ "/assets/javascript/bolsa_familia_estados.js" | prepend: site.baseurl }}"></script>
