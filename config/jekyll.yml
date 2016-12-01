@@ -6,7 +6,7 @@ description: > # this means to ignore newlines until "baseurl:"
   população use dessas informações para encontrar possíveis fraudes e denunciar
   para o orgão competente. Além disso serve como estatística dos gastos públicos
   ao longo do anos.
-baseurl: "/app"
+baseurl: "/site"
 url: "http://brasilsincero.thiagoguimaraes.com.br"
 
 # Build settings

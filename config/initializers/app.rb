@@ -1,15 +1,12 @@
 Rails.application.config.after_initialize do
   Rails.logger = Logger.new(STDOUT)
   begin
-    # make a spot for the site
-    dest = Rails.root.join('public/app')
-
     # generate the site
     Jekyll::Site.new(
       Jekyll.configuration(
         config: Rails.root.join('config', 'jekyll.yml').to_s,
-        source: Rails.root.join('app').to_s,
-        destination: dest.to_s
+        source: Rails.root.join('site').to_s,
+        destination: Rails.root.join('public/site').to_s
       )
     ).process
 
