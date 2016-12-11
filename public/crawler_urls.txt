@@ -172,3 +172,5 @@ http://brasilsincero.thiagoguimaraes.com.br/v1/bolsa_familia/states/ranking?year
 http://brasilsincero.thiagoguimaraes.com.br/v1/bolsa_familia/states/ranking?year=2013
 http://brasilsincero.thiagoguimaraes.com.br/v1/bolsa_familia/states/ranking?year=2012
 http://brasilsincero.thiagoguimaraes.com.br/v1/bolsa_familia/states/ranking?year=2011
+http://brasilsincero.thiagoguimaraes.com.br/v1/bolsa_familia/yearly_costs
+
